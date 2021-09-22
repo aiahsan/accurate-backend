@@ -21,7 +21,7 @@ router.post('/login', async (req, res) => {
         name: user.name,
                 },
       secret,
-      { expiresIn: '1d' }
+      { expiresIn: '500d' }
     );
     return res.status(200).json({
       success: true,
@@ -77,7 +77,7 @@ router.post('/register', async (req, res) => {
           name: user.name,
         },
         secret,
-        { expiresIn: '1d' }
+        { expiresIn: '500d' }
       );
       return res.status(200).json({
         success: true,
