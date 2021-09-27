@@ -22,7 +22,7 @@ try{
   let contact = new Contact({
     company: req.body.company,
     name: req.body.name,
-    phone: req.body.phone,
+    phone: req.body.phone?req.body.phone:"",
     email: req.body.email,
     message: req.body.message,
   });
